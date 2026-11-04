@@ -1,5 +1,7 @@
 # Image Metadata Viewer & Scrubber (Python)
 
+![CI Status](https://github.com/16lv/image-metadata-viewer/actions/workflows/ci.yml/badge.svg)
+
 A Python utility built with **Pillow (PIL)** that inspects image dimensions, formats, file sizes, EXIF tags, and embedded GPS IFD blocks, and creates scrubbed copies with metadata removed.
 
 ## Overview
