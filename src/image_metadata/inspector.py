@@ -24,10 +24,7 @@ class ImageInspectionReport:
 
 
 def inspect_image(path: Path) -> ImageInspectionReport:
-    """
-    Opens a supported image file, extracts dimensions, format, file size,
-    decoded EXIF tags, and any embedded GPS metadata dictionary without modifying the file.
-    """
+    # Read basic dimensions/mode and decode any EXIF + nested GPS tags (tag 34853)
     if not path.exists() or not path.is_file():
         raise FileNotFoundError(f"Image file not found: {path}")
 
@@ -72,10 +69,8 @@ def inspect_image(path: Path) -> ImageInspectionReport:
 
 
 def strip_metadata_to_copy(source_path: Path, output_path: Path) -> dict[str, Any]:
-    """
-    Writes a clean copy of the image to output_path with EXIF and ancillary metadata
-    removed. Refuses to overwrite source_path to keep the original image intact by default.
-    """
+    # Copy pixel data onto a fresh blank image canvas so cached EXIF info isn't carried over.
+    # Also block overwriting the original file by mistake.
     if source_path.resolve() == output_path.resolve():
         raise ValueError(
             "output_path must be distinct from source_path to preserve the original image"
