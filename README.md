@@ -1,6 +1,6 @@
-# Image Metadata Viewer & Scrubber (Python)
+﻿# ExifScrub
 
-![CI Status](https://github.com/16lv/image-metadata-viewer/actions/workflows/ci.yml/badge.svg)
+![CI Status](https://github.com/16lv/exifscrub/actions/workflows/ci.yml/badge.svg)
 
 A Python utility built with **Pillow (PIL)** that inspects image dimensions, formats, file sizes, EXIF tags, and embedded GPS IFD blocks, and creates scrubbed copies with metadata removed.
 
@@ -16,3 +16,4 @@ Photos taken on phones and digital cameras routinely embed device serial numbers
 ruff check .
 pytest -v
 ```
+
