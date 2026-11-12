@@ -1,12 +1,12 @@
-# ExifScrub
+# EXIF Metadata Scrubber (exif-metadata-scrubber)
 
-![CI Status](https://github.com/16lv/exifscrub/actions/workflows/ci.yml/badge.svg)
+![CI Status](https://github.com/16lv/exif-metadata-scrubber/actions/workflows/ci.yml/badge.svg)
 
-**ExifScrub** is a Python 3.12 utility built with **Pillow (PIL)** that inspects image dimensions, formats, colour modes, EXIF tags, and embedded GPS IFD blocks (`34853`), and creates scrubbed copies with metadata removed.
+**EXIF Metadata Scrubber** ($(System.Collections.Hashtable.newRepo)) is a Python 3.12 utility built with **Pillow (PIL)** that inspects image dimensions, formats, colour modes, EXIF tags, and embedded GPS IFD blocks (`34853`), and creates scrubbed copies with metadata removed.
 
 ## Why I Built It
 
-Photos taken on phones and digital cameras routinely embed device serial numbers, timestamps, software strings, and GPS coordinates in EXIF headers. Many simple scripts overwrite files in place or accidentally carry cached metadata dictionaries over when calling `img.save()`. I built ExifScrub to inspect standard and GPS EXIF tags cleanly and write pixel data onto a fresh image canvas while refusing to overwrite the original file.
+Photos taken on phones and digital cameras routinely embed device serial numbers, timestamps, software strings, and GPS coordinates in EXIF headers. Many simple scripts overwrite files in place or accidentally carry cached metadata dictionaries over when calling `img.save()`. I built EXIF Metadata Scrubber to inspect standard and GPS EXIF tags cleanly and write pixel data onto a fresh image canvas while refusing to overwrite the original file.
 
 ## Key Features
 
